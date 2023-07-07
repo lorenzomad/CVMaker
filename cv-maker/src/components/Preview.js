@@ -12,7 +12,7 @@ const Preview = ({data}) => {
          });
       });
 
-    //this doesnt work for an object so I had to convert to array first
+    //this doesn't work for an object so I had to convert to array first
     const list = listItems.map(element => {
         
         return (
@@ -20,9 +20,6 @@ const Preview = ({data}) => {
                 <div>
                     <h4>{element.section}</h4>
                     <p>{element.entry}</p> 
-                </div>
-                <div>
-                    <button>Edit</button>
                 </div>
             </li>)
         })
