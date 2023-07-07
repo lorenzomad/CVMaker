@@ -1,35 +1,37 @@
-import Input from "./components/Input";
-import Overview from "./components/Overview";
+import Form from "./components/Form";
+import Preview from "./components/Preview";
 import { useState } from "react";
 
 function App() {
 
-  const [nextId, setId] = useState(0)
+  const [fieldValues, setFields] = useState({
+    name: '',
+    lastName: '',
+    phoneNumber: '',
+    university: '',
+    titleOfStudy: '',
+    dateOfTitle: '',
+    companyName: '',
+    positionTitle: '',
+    mainTask: '',
+    startDate: '',
+    endDate: '',
+  })
 
-  const [todoList, setTodoList] = useState([])
-
-  const submitTask = (taskName) => {
-    setTodoList(
-      [
-        ...todoList,
-        {id: nextId , name: taskName}
-
-      ]);
-      setId(nextId + 1)
-  }
-
-  const deleteItem = (id) => {
-    
-    const arr = todoList.filter((item) => item.id !== id);
-        
-    setTodoList(arr)
+  const submitForm = (data) => {
+    setFields(data);
   }
 
   return (
-    <div>
-      <h1> Task Overview </h1>
-      <Input submitTask={submitTask}/>
-      <Overview todoList={todoList} click={deleteItem}/>
+    <div className="container">
+      <div className="form">
+        <h1>Insert your data</h1>
+        <Form submitForm={submitForm}></Form>
+      </div>
+      <div className="preview">
+        <h1>Preview</h1>
+        <Preview data= {fieldValues}></Preview>
+      </div>
     </div>
   );
 }
