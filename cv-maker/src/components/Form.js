@@ -81,8 +81,10 @@ const Form = ({submitForm}) => {
                 <h1>Personal information</h1>
                 <label>First Name:</label>
                 <input type="text" onChange={handleFirstNameChange}></input>
+                <br/>
                 <label>Last Name:</label>
                 <input type="text" onChange={handleLastNameChange}></input>
+                <br/>
                 <label>Phone number:</label>
                 <input type="tel" onChange={handlePhoneChange}></input>
             </div>
@@ -90,8 +92,10 @@ const Form = ({submitForm}) => {
                 <h1>University information</h1>
                 <label> University Name:</label>
                 <input type="text" onChange={handleUniversityChange}></input>
+                <br/>
                 <label>Degree Title:</label>
                 <input type="text" onChange={handleStudyTitleChange}></input>
+                <br/>
                 <label>Degree Date:</label>
                 <input type="date" onChange={handleDateTitleChange}></input>
             </div>
@@ -99,12 +103,16 @@ const Form = ({submitForm}) => {
                 <h1>Work information</h1>
                 <label>Company Name:</label>
                 <input type="text" onChange={handleCompanyChange}></input>
+                <br/>
                 <label>Job Position:</label>
                 <input type="text" onChange={handlePositionChange}></input>
+                <br/>
                 <label>Main Tasks:</label>
                 <input type="text" onChange={handleMainTaskChange}></input>
+                <br/>
                 <label>Start Date :</label>
                 <input type="date" onChange={handleStartDateChange}></input>
+                <br/>
                 <label>End Date :</label>
                 <input type="date" onChange={handleEndDateChange}></input>
             </div>
