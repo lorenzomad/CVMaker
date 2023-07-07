@@ -10,7 +10,10 @@ const Input = ({submitTask}) => {
                 }
             }>
             <label >Task title: </label>
-            <input type="text" placeholder="Enter your task name here!" onChange={e => setTask(e.target.value)} />
+            <input type="text" placeholder="Enter your task name here!" onChange={e => {
+                setTask(e.target.value)
+                e.target.defaultValue = ''
+                }} />
             <input type="submit"/>
         </form>
     );

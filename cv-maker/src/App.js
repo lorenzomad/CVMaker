@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function App() {
 
-  let nextId = 0
+  const [nextId, setId] = useState(0)
 
   const [todoList, setTodoList] = useState([])
 
@@ -12,15 +12,24 @@ function App() {
     setTodoList(
       [
         ...todoList,
-        {id: nextId++ , name: taskName}
+        {id: nextId , name: taskName}
+
       ]);
+      setId(nextId + 1)
+  }
+
+  const deleteItem = (id) => {
+    
+    const arr = todoList.filter((item) => item.id !== id);
+        
+    setTodoList(arr)
   }
 
   return (
     <div>
       <h1> Task Overview </h1>
       <Input submitTask={submitTask}/>
-      <Overview todoList={todoList}/>
+      <Overview todoList={todoList} click={deleteItem}/>
     </div>
   );
 }
