@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/CVMaker/static/js/main.e876bd9e.js",
+    "index.html": "/CVMaker/index.html",
+    "main.e876bd9e.js.map": "/CVMaker/static/js/main.e876bd9e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e876bd9e.js"
+  ]
+}
